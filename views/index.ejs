@@ -1,11 +1,34 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<DOCTYPE html>
+  <html>
+      <head>
+          <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+          <link rel='stylesheet' href='/stylesheets/style.css'/>
+      </head>
+      <body>
+          <header class='copyright'>
+                  <p>Designed and coded by with <span class="fa fa-heart heart"></span> by <a class='link-copyright' href="https://codepen.io/BlessedCamper" target='_blank'>Gilbert</a></p>
+          </header>
+          <div class="App">
+              <h1>API Basejump 2: Request Header Parser Microservice</h1>
+              <div>
+                  <h2>User stories:</h2>
+                  <p>
+                      I can get the IP address, language and operating system for my browser.
+                  </p>
+              </div>
+              <div>
+                  <h2>Example usage:</h2>
+                  <p>
+                    <a class='link' href="http://<%=hostname%>/whoami" target='_blank'>http://<%=hostname%>/whoami</a>
+                  </p> 
+              </div>
+              <div>
+                  <h2>Example output:</h2>
+                  <pre><code>{ "ipadress": 190.196.202.95, language:"fr-FR", "software": 
+                    "Windows NT 6.1; Win64; x64" }</code></pre>
+              </div>
+          </div>
+          
+      </body>
+  </html>
+  
