@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/whoami', function(req, res, next) {
 
-  var languageRegex=/^(\S)*,(\S)*$/;
-  var softwareRegex=//;
+  var language=req.headers['accept-language'].replace(/([\w]{2}-[\w]{2})(\S)*/,"$1");
+  var software=req.headers['user-agent'].replace(/\S*\s\(([^\)]+)\)(.)*/i,"$1");
 
-  res.json({ipadress: req.header('x-forwarded-for') || req.connection.remoteAddress,language:req.headers['accept-language'],sofware:req.headers['user-agent']})
+  res.json({ipadress: req.connection.remoteAddress,language:language,software:software});
 });
 
 
